@@ -33,7 +33,7 @@ int main(){
     }
     int **arr2 = new int *[o];
     for(int i = 0; i < o; i++){
-        arr2[i] = new int[p];
+        arr2[i] = new int[p]; 
     }
     for(int i = 0; i < o; i++){
         for(int j = 0; j < p; j++){
