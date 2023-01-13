@@ -58,7 +58,7 @@ int func(char **arr, char **result, int n){
 }
 
 int main(){
-    int n = 5;
+    int n = 6;
     char **arr = new char *[n];
     for(int i = 0; i < n; i++){
         arr[i] = new char[10];
@@ -72,6 +72,7 @@ int main(){
     arr[2] = (char*)"WA 1234";
     arr[3] = (char*)"LRY 888";
     arr[4] = (char*)"LU 999";
+    arr[5] = (char*)"LU 666";
     int num = func(arr, res, n);
     for(int i = 0; i < num; i++){
         std::cout << res[i] << "\n";
