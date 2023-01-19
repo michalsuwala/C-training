@@ -22,6 +22,7 @@ OUT:
 
 #include <iostream>
 #include <cmath>
+#include <cstdlib>
 #include <algorithm>
 
 int comp(const void *a, const void *b){
@@ -29,7 +30,7 @@ int comp(const void *a, const void *b){
     double y1 = ((const double*)a)[1];
     double x2 = ((const double*)b)[0];
     double y2 = ((const double*)b)[1];
-    return ((x2 * x2 + y2 * y2) - (x1 * x1 + y1 * y1));
+    return -((x2 * x2 + y2 * y2) - (x1 * x1 + y1 * y1));
 }
 
 void func(double array[], int n){
@@ -39,7 +40,7 @@ void func(double array[], int n){
         coord[i][1] = array[2 * i] * sin(array[2 * i + 1]);
     }
     std::qsort(coord, n, 2 * sizeof(double), comp);
-    std::reverse(coord, coord + n);
+    //std::reverse(coord, coord + n);
     for(int i = 0; i < n; i++){
         std::cout << coord[i][0] << " " << coord[i][1] << "\n";
     }
