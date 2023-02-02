@@ -14,10 +14,10 @@ void null_set(void *arr1, void *arr2, int n, int size){
 }
 
 int main(){
- int n = 5;
- int arr1[n] = {1,2,2,2,2};
- int arr2[n] = {1,2,3,4,5};
- null_set(arr1, arr2, n, sizeof(int));
+ int n = 4;
+ float arr1[n] = {8.0,9.3,10.7,11.0};
+ float arr2[n] = {8.0,3.1,10.7,4.2};
+ null_set(arr1, arr2, n, sizeof(float));
  for(int i = 0; i < n; i++){
   std::cout << arr1[i] << " ";
  }
